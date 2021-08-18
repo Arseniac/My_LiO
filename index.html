@@ -6,66 +6,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arseniac</title>
 
+
+
+    <link rel="icon" href="images/favicon/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/style.min.css">
-    <link rel="stylesheet" href="css/reset.css">
+    
 </head>
 <body>
     
     <header id="header" class="header">
         <div class="container">
-            <div class="header__inner">
+            
                 <div class="header__top">
 
-                    <nav class="menu">
+                    <nav id= menu class="menu">
                         <ul class="menu__list">
                             <li class="menu__list-item">
-                                <a class="menu__list-item--link" href="#header">Главная</a>
+                                <a class="menu__list-item--link lng-menu__item-1" href="#header">Главная</a>
                             </li>
                             <li class="menu__list-item">
-                                <a class="menu__list-item--link" href="#about">Обо мне</a>
+                                <a class="menu__list-item--link lng-menu__item-2" href="#about">Обо мне</a>
                             </li>
                             <li class="menu__list-item">
-                                <a class="menu__list-item--link" href="#skills">Навыки</a>
+                                <a class="menu__list-item--link lng-menu__item-3" href="#skills">Навыки</a>
                             </li>
                             <li class="menu__list-item">
-                                <a class="menu__list-item--link" href="#works">Примеры работ</a>
+                                <a class="menu__list-item--link lng-menu__item-4" href="#works">Примеры работ</a>
                             </li>
                             <li class="menu__list-item">
-                                <a class="menu__list-item--link" href="#contacts">Контакты</a>
+                                <a class="menu__list-item--link lng-menu__item-5" href="#contacts">Контакты</a>
                             </li>
                         </ul>
                     </nav>
                     
                 </div>
+                
                 <div class="header__content">
-                    <h1 class="header__content-name">
-                        Ковин<br> Арсений
-                    </h1>
-                    <div class="header__content-job">
-                        Web-designer | Front end developer | Programmer
-                    </div>
-                    <div class="header__content-switcher">
-                        <div class="header__content-switcher__btn">
-                            RU
+
+                    
+                    <div class="header__content-text">
+                        <h1 class="header__content-name lng-my__name">
+                            Ковин<br> Арсений
+                        </h1>
+    
+    
+                        <div class="header__content-job lng-my__job">
+                            <ul class="header__content-job--list">
+                                <li class="lng-job__item-1">Web-designer</li>
+                                <li class="lng-job__item-2">Front end developer</li>
+                                <li class="lng-job__item-3">Programmer</li>
+                                <li class="lng-job__item-4">Designer</li>
+                                
+                                
+                            </ul>
+                             
                         </div>
-                          <span>|</span>
-                        <div class="header__content-switcher__btn">
-                            ENG
-                        </div>
                     </div>
+    
+                    
+                
+                    
+                    
+                    <div class="header__image">
+                        <img src="images/my_picture.jpg" alt="">
+
+                        <select class="header__content-switcher">
+                            <option value="ru" class="header__content-switcher__btn" selected>
+                                RU
+                            </option>
+                              <span>|</span>
+                            <option value="en" class="header__content-switcher__btn">
+                                EN
+                            </option>
+                        </select>
+                    </div>
+
+                    
+                    
+                
+
                 </div>
-                <div class="header__image">
-                    <img src="images/my_picture-2.jpg" alt="">
-                </div>
-            </div>
+
+           
         </div>
     </header>
 
     <section id="about" class="about">
         <div class="container">
             <div class="about__content">
-                <h3 class="about__title title">
+                <h3 class="about__title title lng-about__me">
                     Обо мне
                 </h3>
                 <div class="about__content">
@@ -90,7 +122,7 @@
     <section id="skills" class="skills">
         <div class="container">
             <div class="skills__inner">
-                <h3 class="skills__title title">
+                <h3 class="skills__title title lng-skills__me">
                     Мои навыки
                 </h3>
                 
@@ -100,7 +132,7 @@
                     <div class="skills__item">
                         <h3 class="title">Figma</h3>
                         <img class="skills__slider-img" src="images/figma.png" alt="">
-                        <p class="skills__item-text">
+                        <p class="skills__item-text lng-skills__item-1">
                             Figma (Фигма) — графический онлайн-редактор для совместной работы. В нём можно создать прототип сайта, интерфейс приложения и обсудить правки с коллегами в реальном времени.
                         </p>
                         
@@ -108,21 +140,21 @@
                     <div class="skills__item">
                         <h3 class="title">HTML5</h3>
                         <img class="skills__slider-img" src="images/html.png" alt="">
-                        <p class="skills__item-text">
+                        <p class="skills__item-text lng-skills__item-2">
                             HTML5 — открытая платформа, предназначенная для создания веб-приложений использующих аудио, видео, графику, анимацию и многое другое.
                         </p>
                     </div>
                     <div class="skills__item">
                         <h3 class="title">CSS3</h3>
                         <img class="skills__slider-img" src="images/css.png" alt="">
-                        <p class="skills__item-text">
+                        <p class="skills__item-text lng-skills__item-3">
                             CSS3 - язык описания внешнего вида документа, написанного с использованием языка разметки. Обычно используется для описания оформления веб-страниц, написанных с помощью языка разметки HTML.
                         </p>
                     </div>
                     <div class="skills__item">
                         <h3 class="title">JAVASCRIPT</h3>
                         <img class="skills__slider-img" src="images/js.png" alt="">
-                        <p class="skills__item-text">
+                        <p class="skills__item-text lng-skills__item-4">
                             JavaScript — язык программирования, который даёт возможность реализовывать сложное поведение веб-страницы. Своевременное обновление контента, интерактивные карты, анимации... - будьте уверены, здесь не обошлось без JavaScript.
                         </p>
                     </div>
@@ -142,7 +174,7 @@
 
     <section id="works" class="works">
         <div class="container">
-            <h3 class="works__title title">
+            <h3 class="works__title title lng-works__me">
                 Примеры моих работ
             </h3>
             
@@ -179,21 +211,21 @@
     <section id="contacts" class="contacts">
         <div class="container">
             <div class="contacts__inner">
-                <h3 class="contacts__title title">
+                <h3 class="contacts__title title lng-contacts__me">
                     Контакты
                 </h3>
-                <div class="contacts__text">
+                <div class="contacts__text lng-contacts__text">
                     Хотите что-либо обсудить? <br>
                     Всегда рад буду помочь!
                 </div>
 
-                <button class="contacts__send-btn">
-                    Отправить сообщение
-                </button>
+                <a href="mailto:a2611k@gmail.com" class="contacts__send-btn lng-contacts__btn">
+                    Отправить письмо на почту
+                </a>
 
                 <div class="contacts__email">
                     
-                    <div class="contacts__email-text">*форма для обращения на почтовый адрес</div>
+                    <div class="contacts__email-text lng-contacts__email-descr">*форма для обращения на почтовый адрес</div>
                         <div class="contacts__email-svg">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40 40" width="40px" height="40px">
                                 <g id="surface92168965">
@@ -254,7 +286,7 @@
 
                 </div>  
 
-                <div class="contacts__descr">
+                <div class="contacts__descr lng-contacts__descr-text">
                     Вы можете написать мне:<br>
                     Vkontakte, Instagram, Telegram, WhatsApp
                 </div>
@@ -264,9 +296,42 @@
     </section>
 
 
+    <a href="#header" class="top">
+        <i aria-hidden="true">
+            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                	 width="50px" height="50px" viewBox="0 0 612 612" style="enable-background:new 0 0 612 612;" xml:space="preserve">
+                <g>
+                	<g id="_x33__34_">
+                		<g>
+                			<path d="M320.841,159.005c-3.997-4.016-9.313-5.718-14.534-5.451c-5.241-0.268-10.539,1.435-14.536,5.451l-94.516,114.387
+                				c-7.497,7.516-7.497,19.718,0,27.234c7.497,7.516,19.66,7.516,27.157,0l62.462-75.62v291.369
+                				c0,10.557,8.568,19.125,19.125,19.125c10.557,0,19.125-8.568,19.125-19.125V224.279l63.094,76.347
+                				c7.497,7.516,19.66,7.516,27.157,0c7.497-7.516,7.497-19.718,0-27.234L320.841,159.005z M478.125,76.5h-344.25
+                				c-10.557,0-19.125,8.568-19.125,19.125s8.568,19.125,19.125,19.125h344.25c10.557,0,19.125-8.568,19.125-19.125
+                				S488.682,76.5,478.125,76.5z M535.5,0h-459C34.253,0,0,34.253,0,76.5v459C0,577.747,34.253,612,76.5,612h459
+                				c42.247,0,76.5-34.253,76.5-76.5v-459C612,34.253,577.747,0,535.5,0z M573.75,535.5c0,21.114-17.117,38.25-38.25,38.25h-459
+                				c-21.133,0-38.25-17.117-38.25-38.25v-459c0-21.114,17.136-38.25,38.25-38.25h459c21.133,0,38.25,17.136,38.25,38.25V535.5z"/>
+                		</g>
+                	</g>
+                </g>
+                
+            </svg>
+
+        </i>
+    </a>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="js/lang.js"></script>
+    
+    <script>
+
+        
+    </script>
+
     <script src="js/slick.min.js"></script>
     
+    <script src="js/lang-switcher.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
