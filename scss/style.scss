@@ -1,4 +1,8 @@
 $block-color: #D9B250;
+$text-color: #070707;
+
+
+
 html{
     box-sizing: border-box;
 }
@@ -44,7 +48,7 @@ html{
 }
 
 body{
-    color: #070707;
+    color: $text-color;
     font-family: "Gilroy-Medium";
     font-weight: 400;
     font-size: 18px;
@@ -55,7 +59,7 @@ body{
 }
 
 a{
-    color: #070707;
+    color: $text-color;
     text-decoration: none;
 }
 
@@ -93,6 +97,14 @@ section{
         justify-content: space-between;
         border-bottom: 1px solid #828282;
         
+        &-item{
+            &--link{
+                transition: all .3s;
+                &:hover{
+                    color: rgb(101, 185, 31);
+                }
+            }
+        }
     }
 }
 
@@ -248,6 +260,9 @@ option {
 }
 
 select {
+    
+
+
     background-color: transparent;
     outline: none;
     border: none;
@@ -362,7 +377,12 @@ select {
             }
         }
         & a{
-            color: #070707;
+            
+            color: $text-color;
+            transition: all .5s;
+            &:hover{
+                color: greenyellow;
+            }
         }
     }
     
@@ -425,6 +445,10 @@ select {
         padding: 13px 36px;
         border-radius: 25px;
 
+        transition: all .5s;
+        &:hover{
+            color: greenyellow;
+        }
         cursor: pointer;
     }
     &__email{
@@ -479,6 +503,8 @@ select {
         margin-left: 61px;
     }
     &__item{
+    
+        
         &-telegram{
             margin-top: 9px;
             padding-left: 5px;
@@ -519,13 +545,20 @@ select {
     outline: none;
 }
 
-.slick-prev{
-    
+.slick-next{
+    transition: all .5s;
+    &:hover{
+        fill: greenyellow;
+    }
     left: 54%;
     
     
 }
-.slick-next{
+.slick-prev{
+    transition: all .5s;
+    &:hover{
+        fill: greenyellow;
+    }
     right: 54%;
     
 }
@@ -581,17 +614,21 @@ select {
 
 
 .top{
+    display: none;
     & i{
         display: block;
         position: fixed;
-        bottom: 20px;
-        right: 20px;
+        bottom: 25px;
+        left: 20px;
         z-index: 100;
         
         & svg{
             
-            fill: #070707;
-            
+            fill: $text-color;
+            transition: all .5s;
+            &:hover{
+                fill: greenyellow;
+            }
         }
     }
 }
@@ -641,7 +678,8 @@ select {
     }
 
     .header__burger{
-        margin-top: 20px;
+        margin-top: 25px;
+        margin-left: 40px;
         display: block;
         position: relative;
         width: 30px;
@@ -650,7 +688,7 @@ select {
         &::before{
             z-index: 300;
             content: "";
-            background-color: blue;
+            background-color: $text-color;
             position: absolute;
             width: 100%;
             height: 2px;
@@ -660,7 +698,7 @@ select {
         }
         & span{
             z-index: 300;
-            background-color: blue;
+            background-color: $text-color;
             position: absolute;
             width: 100%;
             height: 2px;
@@ -691,6 +729,7 @@ select {
     }
 
     .menu{
+        transition:all 1s;
         text-align: center;
         z-index: 200;
         position: fixed;
@@ -698,26 +737,36 @@ select {
         left: 0;
         width: 100%;
         
-        background-color: red;
+        background-color: transparent;
         padding-top: 50px;
         overflow: auto;
-        transition: all .5s;
+        
 
         &.active{
+            transition:all 1s;
             top: 0;
-            .header__content-text {}
+            //.header__content-text {height: 50vh;}
         }
 
         &__list{
             display: block;
+            border: none;
             &-item{
                 border-bottom: 1px solid gray;
                 margin-bottom: 20px;
+                padding-bottom: 10px;
+                &:first-child{
+                    border-top: 1px solid gray;
+                    padding-top: 10px;
+                }
             }
         }
     }
 
-
+    .add-padding{
+        padding-top: 40vh;
+        transition:all 1s;
+    }
 
 
     .header__content{
@@ -729,7 +778,7 @@ select {
         font-size: 62px;
         line-height: 47px;
         font-weight: 700;
-        padding-right: 88px;
+        padding-left: 0px;
     }
 
     .skills{
@@ -740,4 +789,9 @@ select {
             }
         }
     }
+    .lock-events{
+        cursor: wait;
+        pointer-events: none;
+    }
+    
 }
