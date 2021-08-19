@@ -20,8 +20,12 @@ const langArr = {
         "en": "Contacts",
     },
     "my__name":{
-        "ru": "Ковин<br> Арсений",
-        "en": "Kovin<br> Arseniy",
+        "ru": "Ковин",
+        "en": "Kovin",
+    },
+    "my__surname":{
+        "ru": "Арсений",
+        "en": "Arseniy",
     },
     
     "job__item-1":{

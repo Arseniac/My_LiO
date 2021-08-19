@@ -19,9 +19,7 @@ function changeLanguage(){
     }
     select.value = hash;
 
-    //document.querySelector('.lng-menu__item-1').innerHTML = langArr['menu__item-1'][hash];
-
-    //document.querySelector('.lng-my__job').innerHTML = langArr['my__job'][hash];
+    
 
     for (let key in langArr){
         document.querySelector('.lng-' + key).innerHTML = langArr[key][hash];

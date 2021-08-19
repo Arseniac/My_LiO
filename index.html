@@ -10,6 +10,12 @@
 
     <link rel="icon" href="images/favicon/favicon.ico" type="image/x-icon">
 
+
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@1,700&display=swap" rel="stylesheet">
+
+
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/style.min.css">
@@ -17,12 +23,16 @@
 </head>
 <body>
     
-    <header id="header" class="header">
+    <header id="header" class="header top__arrow">
         <div class="container">
             
                 <div class="header__top">
 
-                    <nav id= menu class="menu">
+                    <div class="header__burger">
+                        <span></span>
+                    </div>
+
+                    <nav class="menu">
                         <ul class="menu__list">
                             <li class="menu__list-item">
                                 <a class="menu__list-item--link lng-menu__item-1" href="#header">Главная</a>
@@ -49,8 +59,12 @@
                     
                     <div class="header__content-text">
                         <h1 class="header__content-name lng-my__name">
-                            Ковин<br> Арсений
+                            Ковин
+                            
                         </h1>
+                        <div class="header__content-name header__content-name-span lng-my__surname">
+                            Арсений
+                        </div>
     
     
                         <div class="header__content-job lng-my__job">
@@ -58,7 +72,7 @@
                                 <li class="lng-job__item-1">Web-designer</li>
                                 <li class="lng-job__item-2">Front end developer</li>
                                 <li class="lng-job__item-3">Programmer</li>
-                                <li class="lng-job__item-4">Designer</li>
+                                <li class="lng-job__item-4">Мужик</li>
                                 
                                 
                             </ul>
@@ -97,9 +111,9 @@
     <section id="about" class="about">
         <div class="container">
             <div class="about__content">
-                <h3 class="about__title title lng-about__me">
+                <h2 class="about__title title2 lng-about__me">
                     Обо мне
-                </h3>
+                </h2>
                 <div class="about__content">
                     <p>
                         Hi, I'm Arseniy – Front end developer from Saint-Petersburg. <br>
@@ -122,9 +136,9 @@
     <section id="skills" class="skills">
         <div class="container">
             <div class="skills__inner">
-                <h3 class="skills__title title lng-skills__me">
+                <h2 class="skills__title title2 lng-skills__me">
                     Мои навыки
-                </h3>
+                </h2>
                 
 
                 <div class="skills__slider">
@@ -174,34 +188,34 @@
 
     <section id="works" class="works">
         <div class="container">
-            <h3 class="works__title title lng-works__me">
+            <h2 class="works__title title2 lng-works__me">
                 Примеры моих работ
-            </h3>
+            </h2>
             
             <div class="works__item">
                 <div class="works__item-img">
-                    <img src="images/works-1.jpg" alt="">
+                    <img src="images/works-4.jpg" alt="">
                 </div>
-                <a class="works__item-descr" href="#">
-                    Online fashion store - Homepage
+                <a class="works__item-descr" href="https://arseniac.github.io/Tesla/">
+                    Тесла - Homepage
                 </a>
             </div>
 
             <div class="works__item">
                 <div class="works__item-img">
-                    <img src="images/works-1.jpg" alt="">
+                    <img src="images/works-2.jpg" alt="">
                 </div>
-                <a class="works__item-descr" href="#">
-                    Online fashion store - Homepage
+                <a class="works__item-descr" href="https://arseniac.github.io/Space/">
+                    Космический туризм - Homepage
                 </a>
             </div>
 
             <div class="works__item">
                 <div class="works__item-img">
-                    <img src="images/works-1.jpg" alt="">
+                    <img src="images/works-5.jpg" alt="">
                 </div>
-                <a class="works__item-descr" href="#">
-                    Online fashion store - Homepage
+                <a class="works__item-descr" href="https://arseniac.github.io/Carsharing/">
+                    Каршеринг в Москве - Homepage
                 </a>
             </div>
 
@@ -211,9 +225,9 @@
     <section id="contacts" class="contacts">
         <div class="container">
             <div class="contacts__inner">
-                <h3 class="contacts__title title lng-contacts__me">
+                <h2 class="contacts__title title2 lng-contacts__me">
                     Контакты
-                </h3>
+                </h2>
                 <div class="contacts__text lng-contacts__text">
                     Хотите что-либо обсудить? <br>
                     Всегда рад буду помочь!
@@ -324,10 +338,8 @@
 
     <script src="js/lang.js"></script>
     
-    <script>
+    
 
-        
-    </script>
 
     <script src="js/slick.min.js"></script>
     

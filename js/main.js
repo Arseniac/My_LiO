@@ -17,11 +17,13 @@ $(function (){
 
         ]
     });
-
-
-
-
+    
+    $( ".top__arrow" ).on('click', function(){ 
+	    $('.top').fadeOut(); 
+	  });
+    
     $('a.menu__list-item--link , a.top').on('click', function (event){
+       
         var $anchor = $(this)
         $('html, body')
             .stop()
@@ -35,11 +37,29 @@ $(function (){
                     height: 'easeInOutCubic',
                 },
             }
+
         event.preventDefault()
     })
-
+    $(window).scroll(function() {
+        // если пользователь прокрутил страницу более чем на 200px
+            if ($(this).scrollTop()>200) {
+                // то сделать кнопку scrollup видимой
+                $('.top').fadeIn();
+            }
+            // иначе скрыть кнопку scrollup
+            else {
+                $('.top').fadeOut();
+            }
+    });    
+      
+    $('.header__burger').on('click', function(event){
+        $('.header__burger, .menu').toggleClass('active');
+        $('body').toggleClass('lock');
+        $(".header__content-text").hide();
+    });
     
-
+    $('.active').on('click', function(event){
+        $(".header__content-text").slideToggle(300);
+        return false;
+    });
 })
-
-

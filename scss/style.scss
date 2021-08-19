@@ -27,6 +27,16 @@ html{
     font-display: swap;
 }
 
+@font-face {
+    // название шрифта(чтобы не запутаться лучше указать название папки со шрифтом) 
+    font-family: "balqis"; 
+    // адрес шрифта и тип 
+    src: url("../fonts/balqis.woff") format("woff"); 
+    font-style: normal; 
+    font-weight: 400; 
+    font-display: swap;
+}
+
 .container{
     max-width: 980px;
     padding: 0 15px;
@@ -56,10 +66,17 @@ button{
 }
 
 .title{
-    font-family: "Gilroy-Bold";
+    font-family: 'Caveat', cursive;
     font-weight: 700;
     font-size: 34px;
     line-height: 42px;
+}
+
+.title2{
+    font-family: 'Caveat', cursive;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 50px;
 }
 
 section{
@@ -80,14 +97,18 @@ section{
 }
 
 .header{
-    height: 100vh;
+
+    &__burger{
+        display: none;
+    }
+    //height: 100vh;
     padding-top: 10px;
     padding-bottom: 30px;
 
     position: relative;
     z-index: 1;
     .container{
-            
+        margin-bottom: 20px;
         &::before{
             position: absolute;
             
@@ -111,28 +132,43 @@ section{
         padding: 0 2px;
     }
     &__content{
-        padding-left: 60px;
+        //padding-left: 60px;
         display: flex;
         justify-content: space-around;
         //flex-wrap: wrap;
         align-items: center;
         padding-top: 20vh;
+        padding-bottom: 14vh;
         
 
         &-text{
             width: 80%;
             display: flex;
+            align-items: center;
             flex-direction: column;
             
             //align-items: flex-end;
         }
         &-name{
-            margin-bottom: 15px;
-            font-size: 78px;
-            line-height: 78px;
+            //font-family: 'Caveat', cursive;
+            //font-family: "balqis"; 
+            font-family: 'Philosopher', sans-serif;
+            //font-family: 'Marck Script', cursive;
+            
+            margin-bottom: 5px;
+            font-size: 77px;
+            line-height: 55px;
             font-weight: 700;
+            font-style: italic;
+            &-span{
+                //font-family: 'Marck Script', cursive;
+                
+                padding-left: 115px;
+                
+            }
         }
         &-job{
+            padding-top: 10px;
             margin-left: 10px;
             margin-right: 10px;
             &--list{
@@ -194,12 +230,13 @@ section{
     }
     &__image{
         display: flex;
+        justify-content: flex-end;
         height: 100%;
         //justify-content: space-around;
         & img{
             // width: 280px;
             // height: 250px;
-            width: 65%;
+            width: 75%;
             //height: 100%;
             border: 2px ridge $block-color;
             border-radius: 5%;
@@ -373,7 +410,6 @@ select {
     padding-bottom: 85px;
     &__title{
         margin-bottom: 30px;
-        font-weight: normal;
     }
     &__text{
         margin-bottom: 80px;
@@ -542,9 +578,7 @@ select {
 
 
 
-.active{
-    color: brown;
-}
+
 
 .top{
     & i{
@@ -600,9 +634,91 @@ select {
 
 
 
-
-
 @media (max-width: 800px){
+
+    body.lock{
+        overflow: hidden;
+    }
+
+    .header__burger{
+        margin-top: 20px;
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        &::after,
+        &::before{
+            z-index: 300;
+            content: "";
+            background-color: blue;
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            left: 0;
+
+            transition: all .5s;
+        }
+        & span{
+            z-index: 300;
+            background-color: blue;
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            left: 0;
+            top: 9px;
+
+            transition: all .5s;
+
+        }
+        &::before{
+            top: 0;
+        }
+        &::after{
+            bottom: 0;
+        }
+        &.active::before{
+            transform: rotate(45deg);
+            top: 9px;
+        }
+        &.active::after{
+            transform: rotate(-45deg);
+            bottom: 9px;
+        }
+        &.active span{
+            transform: scale(0);
+        }
+        
+    }
+
+    .menu{
+        text-align: center;
+        z-index: 200;
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        
+        background-color: red;
+        padding-top: 50px;
+        overflow: auto;
+        transition: all .5s;
+
+        &.active{
+            top: 0;
+            .header__content-text {}
+        }
+
+        &__list{
+            display: block;
+            &-item{
+                border-bottom: 1px solid gray;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+
+
 
     .header__content{
         flex-wrap: wrap;
@@ -610,10 +726,10 @@ select {
     }
     
     .header__content-name {
-        font-size: 40px;
-        line-height: 40px;
+        font-size: 62px;
+        line-height: 47px;
         font-weight: 700;
-        
+        padding-right: 88px;
     }
 
     .skills{
