@@ -83,13 +83,6 @@ $(function (){
             
             $(".header__content-text").toggle("slow");
             $(".header__image").toggleClass('add-padding', 1000);
-
-            
-
-
-
-
-            // $(".header__content-text").show();
         });
         
         $('.menu__list-item--link').on('click', function(event){
@@ -101,9 +94,4 @@ $(function (){
             $('.header__content-switcher').removeClass('lock-events', 1000);
         });
       }
-    
-    
-
-
-    
 })

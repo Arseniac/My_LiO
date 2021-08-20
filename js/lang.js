@@ -44,6 +44,14 @@ const langArr = {
         "ru": "Обо мне",
         "en": "About me",
     },
+    "about__content-text-1":{
+        "ru": "Привет, я Арсений - Front end разработчик из Санкт-Петербурга. <br>Интересуюсь веб-дизайном и всем, что с ним связано.",
+        "en": "Hi, I'm Arseniy – Front end developer from Saint-Petersburg. <br>I'm interested in web-design and everything connected with it.",
+    },
+    "about__content-text-2":{
+        "ru": "Готов реализовать отличные проекты <br> с замечательными людьми.",
+        "en": "Ready to implement excellent projects <br>with wonderful people.",
+    },
     "skills__me":{
         "ru": "Мои навыки",
         "en": "My skills",
